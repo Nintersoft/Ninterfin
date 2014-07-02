@@ -12,7 +12,7 @@
 #include <FMX.StdCtrls.hpp>
 #include <FMX.Types.hpp>
 //---------------------------------------------------------------------------
-class TForm1 : public TForm
+class TfrmInicio : public TForm
 {
 __published:	// IDE-managed Components
 	TBrushObject *Fundo1;
@@ -34,9 +34,9 @@ __published:	// IDE-managed Components
           float X, float Y);
 private:	// User declarations
 public:		// User declarations
-	__fastcall TForm1(TComponent* Owner);
+	__fastcall TfrmInicio(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TForm1 *Form1;
+extern PACKAGE TfrmInicio *frmInicio;
 //---------------------------------------------------------------------------
 #endif
