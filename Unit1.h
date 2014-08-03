@@ -11,6 +11,8 @@
 #include <FMX.Objects.hpp>
 #include <FMX.StdCtrls.hpp>
 #include <FMX.Types.hpp>
+#include <FMX.Layouts.hpp>
+#include <FMX.Memo.hpp>
 //---------------------------------------------------------------------------
 class TfrmInicio : public TForm
 {
@@ -27,11 +29,16 @@ __published:	// IDE-managed Components
 	TButton *btnAjuda;
 	TButton *btnTeste;
 	TText *txtAjuda;
+	TMemo *mmInfo;
 	void __fastcall btnAjudaClick(TObject *Sender);
 	void __fastcall sbMostrarSenhaMouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift,
           float X, float Y);
 	void __fastcall sbMostrarSenhaMouseUp(TObject *Sender, TMouseButton Button, TShiftState Shift,
           float X, float Y);
+	void __fastcall btnCadastrarClick(TObject *Sender);
+	void __fastcall btnTesteClick(TObject *Sender);
+	void __fastcall FormShow(TObject *Sender);
+	void __fastcall btnEntrarClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TfrmInicio(TComponent* Owner);

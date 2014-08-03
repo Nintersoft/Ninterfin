@@ -1,0 +1,175 @@
+object frmCadastro: TfrmCadastro
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = Single
+  Caption = 'Ninterfin - Cadastro'
+  ClientHeight = 352
+  ClientWidth = 576
+  Position = DesktopCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnClose = FormClose
+  OnShow = FormShow
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object cbAceitar: TCheckBox
+    StyledSettings = [Style]
+    Height = 33.000000000000000000
+    Position.X = 40.000000000000000000
+    Position.Y = 232.000000000000000000
+    TabOrder = 9
+    Text = 'Li o conte'#250'do da ajuda ao lado ->'
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 26.000000000000000000
+    TextSettings.FontColor = claLime
+    Width = 497.000000000000000000
+  end
+  object dtCadastro: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    Height = 177.000000000000000000
+    TabOrder = 2
+    Visible = False
+    Width = 945.000000000000000000
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 26.000000000000000000
+    StyledSettings = [Style, FontColor]
+  end
+  object lblUsuario: TLabel
+    StyledSettings = [Style, FontColor]
+    Height = 41.000000000000000000
+    Position.X = 40.000000000000000000
+    Position.Y = 32.000000000000000000
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 26.000000000000000000
+    Text = 'Usu'#225'rio'
+    Width = 153.000000000000000000
+  end
+  object lblSenha: TLabel
+    StyledSettings = [Style, FontColor]
+    Height = 41.000000000000000000
+    Position.X = 40.000000000000000000
+    Position.Y = 80.000000000000000000
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 26.000000000000000000
+    Text = 'Senha'
+    Width = 153.000000000000000000
+  end
+  object lblConfirma: TLabel
+    StyledSettings = [Style, FontColor]
+    Height = 41.000000000000000000
+    Position.X = 40.000000000000000000
+    Position.Y = 128.000000000000000000
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 26.000000000000000000
+    Text = 'Confirma'#231#227'o'
+    Width = 153.000000000000000000
+  end
+  object btnCadastro: TButton
+    StyledSettings = [Style, FontColor]
+    Height = 41.000000000000000000
+    Position.X = 40.000000000000000000
+    Position.Y = 288.000000000000000000
+    TabOrder = 5
+    Text = 'Cadastrar'
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 26.000000000000000000
+    Width = 121.000000000000000000
+    OnClick = btnCadastroClick
+  end
+  object btnLimpar: TButton
+    StyledSettings = [Style, FontColor]
+    Height = 41.000000000000000000
+    Position.X = 176.000000000000000000
+    Position.Y = 288.000000000000000000
+    TabOrder = 6
+    Text = 'Limpar'
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 26.000000000000000000
+    Width = 121.000000000000000000
+    OnClick = btnLimparClick
+  end
+  object btnAjuda: TButton
+    StyledSettings = [Style, FontColor]
+    Height = 25.000000000000000000
+    Position.X = 496.000000000000000000
+    Position.Y = 232.000000000000000000
+    TabOrder = 7
+    Text = '?'
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 26.000000000000000000
+    Width = 24.000000000000000000
+  end
+  object cbEntrar: TCheckBox
+    StyledSettings = [Style, FontColor]
+    Height = 33.000000000000000000
+    Position.X = 40.000000000000000000
+    Position.Y = 184.000000000000000000
+    TabOrder = 8
+    Text = 'Entrar ap'#243's cadastrar'
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 26.000000000000000000
+    Width = 497.000000000000000000
+  end
+  object edtUsuario: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 10
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 26.000000000000000000
+    Position.X = 208.000000000000000000
+    Position.Y = 32.000000000000000000
+    Width = 329.000000000000000000
+    Height = 41.000000000000000000
+    StyledSettings = [Style, FontColor]
+  end
+  object edtSenha: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 11
+    Password = True
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 26.000000000000000000
+    Position.X = 208.000000000000000000
+    Position.Y = 80.000000000000000000
+    Width = 329.000000000000000000
+    Height = 41.000000000000000000
+    StyledSettings = [Style, FontColor]
+  end
+  object edtConfirmar: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 12
+    Password = True
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 26.000000000000000000
+    Position.X = 208.000000000000000000
+    Position.Y = 128.000000000000000000
+    Width = 329.000000000000000000
+    Height = 41.000000000000000000
+    StyledSettings = [Style, FontColor]
+  end
+  object SpeedButton1: TSpeedButton
+    Height = 25.000000000000000000
+    Position.X = 496.000000000000000000
+    Position.Y = 88.000000000000000000
+    StyleLookup = 'passwordeditbutton'
+    Text = 'SpeedButton1'
+    Width = 32.000000000000000000
+    OnMouseDown = SpeedButton1MouseDown
+    OnMouseUp = SpeedButton1MouseUp
+  end
+  object Text1: TText
+    Height = 57.000000000000000000
+    Position.X = 304.000000000000000000
+    Position.Y = 280.000000000000000000
+    Text = 
+      'Confirmo que sei que os dados aqui presentes n'#227'o ser'#227'o enviados ' +
+      #224' servidores externos, ficando apenas no computador local.'
+    TextSettings.HorzAlign = Leading
+    TextSettings.VertAlign = Leading
+    Width = 265.000000000000000000
+  end
+end

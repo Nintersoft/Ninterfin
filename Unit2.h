@@ -8,8 +8,10 @@
 #include <FMX.Forms.hpp>
 #include <FMX.Menus.hpp>
 #include <FMX.Types.hpp>
+#include <FMX.StdCtrls.hpp>
+#include <FMX.Objects.hpp>
 //---------------------------------------------------------------------------
-class TForm2 : public TForm
+class TfrmPrincipal : public TForm
 {
 __published:	// IDE-managed Components
 	TMenuBar *MenuBar1;
@@ -18,11 +20,27 @@ __published:	// IDE-managed Components
 	TMenuItem *imUsuário;
 	TMenuItem *imAjuda;
 	TMenuItem *imSobre;
+	TRectangle *Rectangle1;
+	TRectangle *Rectangle2;
+	TLabel *lblDadosDoUsuario;
+	TLabel *lblEtiquetaUsuario;
+	TButton *btnAlterar;
+	TLabel *lblNome;
+	TLabel *lblUsuario;
+	TLabel *lblNomeReal;
+	TRectangle *Rectangle3;
+	TTimer *tmCheck;
+	TMenuItem *imAbrir;
+	TMenuItem *imSalvar;
+	TMenuItem *imDivisor;
+	TMenuItem *imFechar;
+	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
+	void __fastcall tmCheckTimer(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
-	__fastcall TForm2(TComponent* Owner);
+	__fastcall TfrmPrincipal(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TForm2 *Form2;
+extern PACKAGE TfrmPrincipal *frmPrincipal;
 //---------------------------------------------------------------------------
 #endif

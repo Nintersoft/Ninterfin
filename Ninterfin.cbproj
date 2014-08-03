@@ -127,13 +127,20 @@
             <BuildOrder>2</BuildOrder>
         </CppCompile>
         <CppCompile Include="Unit2.cpp">
-            <Form>Form2</Form>
+            <Form>frmPrincipal</Form>
             <FormType>fmx</FormType>
             <DependentOn>Unit2.h</DependentOn>
             <BuildOrder>3</BuildOrder>
         </CppCompile>
-        <FormResources Include="Unit1.fmx"/>
+        <CppCompile Include="Unit3.cpp">
+            <Form>frmCadastro</Form>
+            <FormType>fmx</FormType>
+            <DependentOn>Unit3.h</DependentOn>
+            <BuildOrder>4</BuildOrder>
+        </CppCompile>
         <FormResources Include="Unit2.fmx"/>
+        <FormResources Include="Unit3.fmx"/>
+        <FormResources Include="Unit1.fmx"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

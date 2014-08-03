@@ -1,0 +1,101 @@
+//---------------------------------------------------------------------------
+
+#include <fmx.h>
+#include <IOUtils.hpp>
+#pragma hdrstop
+
+#include "Unit1.h"
+#include "Unit2.h"
+#include "Unit3.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.fmx"
+TfrmInicio *frmInicio;
+//---------------------------------------------------------------------------
+__fastcall TfrmInicio::TfrmInicio(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TfrmInicio::btnAjudaClick(TObject *Sender)
+{
+	if (txtAjuda->Visible == true) {
+		txtAjuda->Visible = false;
+	}
+	else if (txtAjuda->Visible == false) {
+		txtAjuda->Visible = true;
+	}
+}
+//---------------------------------------------------------------------------
+void __fastcall TfrmInicio::sbMostrarSenhaMouseDown(TObject *Sender, TMouseButton Button,
+          TShiftState Shift, float X, float Y)
+{
+	edtSenha->Password = false;
+}
+//---------------------------------------------------------------------------
+void __fastcall TfrmInicio::sbMostrarSenhaMouseUp(TObject *Sender, TMouseButton Button,
+          TShiftState Shift, float X, float Y)
+{
+	edtSenha->Password = true;
+}
+//---------------------------------------------------------------------------
+void __fastcall TfrmInicio::btnCadastrarClick(TObject *Sender)
+{
+	frmCadastro->Show();
+	frmInicio->Hide();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TfrmInicio::btnTesteClick(TObject *Sender)
+{
+	frmPrincipal->lblNomeReal->Text = "Modo de demonstração";
+	frmPrincipal->lblUsuario->Text = "Teste";
+	frmInicio->Hide();
+	frmPrincipal->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TfrmInicio::FormShow(TObject *Sender)
+{
+	if (TDirectory::Exists(L"CSIDL_APPDATA\\Nintersoft\\Ninterfin")) {
+		if (FileExists("CSIDL_APPDATA\\Nintersoft\\Ninterfin\\Inf.nf")) {
+			mmInfo->Lines->LoadFromFile(L"CSIDL_APPDATA\\Nintersoft\\Ninterfin\\Inf.nf");
+		}
+	}
+	else {
+		try
+		{
+			TDirectory::CreateDirectory("CSIDL_APPDATA\\Nintersoft\\Ninterfin");
+		}
+		catch (...)
+		{
+			MessageDlg("Incorrect path");
+		return;
+		}
+	}
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TfrmInicio::btnEntrarClick(TObject *Sender)
+{
+	int i;
+	for (i = 0; i < 10; i+=2) {
+		if (edtlogin->Text == mmInfo->Lines->Strings[i]) {
+			if (mmInfo->Lines->Strings[i+1] == edtSenha->Text) {
+				frmPrincipal->lblNome->Text = mmInfo->Lines->Strings[i];
+				edtlogin->Text = NULL;
+				edtSenha->Text = NULL;
+			}
+			else {
+				i = 10;
+				ShowMessage("Senha incorreta!");
+			}
+		}
+		if (i == 8 && mmInfo->Lines->Strings[i] != edtlogin->Text) {
+			ShowMessage("O usuário não existe ou está incorreto!");
+		}
+	}
+}
+//---------------------------------------------------------------------------
+

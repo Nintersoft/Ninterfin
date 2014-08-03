@@ -1,0 +1,49 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit3H
+#define Unit3H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <FMX.Controls.hpp>
+#include <FMX.Forms.hpp>
+#include <FMX.Edit.hpp>
+#include <FMX.Layouts.hpp>
+#include <FMX.Memo.hpp>
+#include <FMX.StdCtrls.hpp>
+#include <FMX.Types.hpp>
+#include <FMX.Objects.hpp>
+//---------------------------------------------------------------------------
+class TfrmCadastro : public TForm
+{
+__published:	// IDE-managed Components
+	TLabel *lblUsuario;
+	TMemo *dtCadastro;
+	TLabel *lblSenha;
+	TLabel *lblConfirma;
+	TButton *btnCadastro;
+	TButton *btnLimpar;
+	TButton *btnAjuda;
+	TCheckBox *cbEntrar;
+	TCheckBox *cbAceitar;
+	TEdit *edtUsuario;
+	TEdit *edtSenha;
+	TEdit *edtConfirmar;
+	TSpeedButton *SpeedButton1;
+	TText *txtAjuda;
+	void __fastcall btnLimparClick(TObject *Sender);
+	void __fastcall SpeedButton1MouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift,
+          float X, float Y);
+	void __fastcall SpeedButton1MouseUp(TObject *Sender, TMouseButton Button, TShiftState Shift,
+          float X, float Y);
+	void __fastcall btnCadastroClick(TObject *Sender);
+	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
+	void __fastcall FormShow(TObject *Sender);
+	void __fastcall btnAjudaClick(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TfrmCadastro(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TfrmCadastro *frmCadastro;
+//---------------------------------------------------------------------------
+#endif

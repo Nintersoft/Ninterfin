@@ -1,0 +1,48 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit1H
+#define Unit1H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <FMX.Controls.hpp>
+#include <FMX.Forms.hpp>
+#include <FMX.Edit.hpp>
+#include <FMX.Graphics.hpp>
+#include <FMX.Objects.hpp>
+#include <FMX.StdCtrls.hpp>
+#include <FMX.Types.hpp>
+#include <FMX.Layouts.hpp>
+#include <FMX.Memo.hpp>
+//---------------------------------------------------------------------------
+class TfrmInicio : public TForm
+{
+__published:	// IDE-managed Components
+	TBrushObject *Fundo1;
+	TLine *Divisor;
+	TEdit *edtlogin;
+	TLabel *lblUsuario;
+	TEdit *edtSenha;
+	TLabel *lblSenha;
+	TButton *btnEntrar;
+	TButton *btnCadastrar;
+	TSpeedButton *sbMostrarSenha;
+	TButton *btnAjuda;
+	TButton *btnTeste;
+	TText *txtAjuda;
+	TMemo *Memo1;
+	void __fastcall btnAjudaClick(TObject *Sender);
+	void __fastcall sbMostrarSenhaMouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift,
+          float X, float Y);
+	void __fastcall sbMostrarSenhaMouseUp(TObject *Sender, TMouseButton Button, TShiftState Shift,
+          float X, float Y);
+	void __fastcall btnCadastrarClick(TObject *Sender);
+	void __fastcall btnTesteClick(TObject *Sender);
+	void __fastcall FormShow(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TfrmInicio(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TfrmInicio *frmInicio;
+//---------------------------------------------------------------------------
+#endif

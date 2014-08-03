@@ -7,10 +7,28 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.fmx"
-TForm2 *Form2;
+TfrmPrincipal *frmPrincipal;
 //---------------------------------------------------------------------------
-__fastcall TForm2::TForm2(TComponent* Owner)
+__fastcall TfrmPrincipal::TfrmPrincipal(TComponent* Owner)
 	: TForm(Owner)
 {
 }
 //---------------------------------------------------------------------------
+void __fastcall TfrmPrincipal::FormClose(TObject *Sender, TCloseAction &Action)
+{
+	Application->Terminate();
+}
+//---------------------------------------------------------------------------
+void __fastcall TfrmPrincipal::tmCheckTimer(TObject *Sender)
+{
+	if (lblUsuario->Text == "Teste") {
+		imAbrir->Enabled = false;
+		imSalvar->Enabled = false;
+	}
+	else {
+		imAbrir->Enabled = true;
+		imSalvar->Enabled = true;
+	}
+}
+//---------------------------------------------------------------------------
+
