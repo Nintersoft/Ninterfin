@@ -6,7 +6,9 @@
 //---------------------------------------------------------------------------
 USEFORM("Unit2.cpp", frmPrincipal);
 USEFORM("Unit3.cpp", frmCadastro);
+USEFORM("Unit4.cpp", frmSobre);
 USEFORM("Unit1.cpp", frmInicio);
+USEFORM("Unit5.cpp", frmAddItem);
 //---------------------------------------------------------------------------
 extern "C" int FMXmain()
 {
@@ -16,6 +18,8 @@ extern "C" int FMXmain()
 		Application->CreateForm(__classid(TfrmInicio), &frmInicio);
 		Application->CreateForm(__classid(TfrmPrincipal), &frmPrincipal);
 		Application->CreateForm(__classid(TfrmCadastro), &frmCadastro);
+		Application->CreateForm(__classid(TfrmSobre), &frmSobre);
+		Application->CreateForm(__classid(TfrmAddItem), &frmAddItem);
 		Application->Run();
 	}
 	catch (Exception &exception)

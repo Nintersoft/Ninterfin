@@ -16,7 +16,7 @@ TfrmCadastro *frmCadastro;
 
 //--------------------------- Declaração de Funções -------------------------
 
-bool CheckUser (bool, int);
+bool CheckUser (bool);
 void CriarUsuario ();
 void Limpar();
 
@@ -57,8 +57,7 @@ void __fastcall TfrmCadastro::btnCadastroClick(TObject *Sender)
 	if (edtConfirmar->Text != edtSenha->Text) {
 		throw Exception ("A senha e a confirmação estão diferentes!");
 	}
-
-	CheckUser (UserExiste, int w);
+	CheckUser (UserExiste);
 
 	if (UserExiste == true) {
 		throw Exception ("O usuário requisitado já existe! Por favor escolha outro nome de usuário!");
@@ -68,17 +67,31 @@ void __fastcall TfrmCadastro::btnCadastroClick(TObject *Sender)
 	}
 }
 //---------------------------------------------------------------------------
-bool CheckUser (bool test, int i){
-	for (i = 0; i < 10; i++) {
+bool CheckUser (bool test){
+	int i=2;
+	do {
 		if (frmCadastro->dtCadastro->Lines->Strings[i] == frmCadastro->edtUsuario->Text) {
 			test = true;
-			i=10;
+			i=12;
 		}
-		if (frmCadastro->dtCadastro->Lines->Strings[i] == "") {
-			i=10;
+		if (frmCadastro->dtCadastro->Lines->Strings[i] == "" | frmCadastro->dtCadastro->Lines->Strings[i] == NULL) {
+			i=12;
 			test = false;
 		}
-	}
+	i+=2;
+	} while (i<12 && frmCadastro->dtCadastro->Lines->Strings[i] != NULL);
+
+//	for (i = 0; i < 10; i+=2) {
+//		if (frmCadastro->dtCadastro->Lines->Strings[i] == frmCadastro->edtUsuario->Text) {
+//			test = true;
+//			i=10;
+//		}
+//		if (frmCadastro->dtCadastro->Lines->Strings[i] == "") {
+//			i=10;
+//			test = false;
+//		}
+//	}
+
 	return test;
 }
 //---------------------------------------------------------------------------
@@ -89,8 +102,8 @@ void __fastcall TfrmCadastro::FormClose(TObject *Sender, TCloseAction &Action)
 }
 //---------------------------------------------------------------------------
 void CriarUsuario (){
-	int i;
-	for (i = 0; i < 10; i++) {
+	int i = 2;
+	for (i = 0; i < 12; i++) {
 		if (frmCadastro->dtCadastro->Lines->Strings[i] == "" && i%2 == 0) {
 			frmCadastro->dtCadastro->Lines->Add(frmCadastro->edtUsuario->Text);
 			frmCadastro->dtCadastro->Lines->Add(frmCadastro->edtSenha->Text);
@@ -100,7 +113,7 @@ void CriarUsuario (){
 
 			frmCadastro->dtCadastro->Lines->SaveToFile(LocalArquivo);
 
-			i = 10;
+			i = 12;
 			ShowMessage("Usuario criado com sucesso!");
 				if (frmCadastro->cbEntrar->IsChecked == true) {
 					frmPrincipal->lblNome->Text = frmCadastro->edtUsuario->Text;
@@ -112,18 +125,18 @@ void CriarUsuario (){
 					frmCadastro->Close();
 				}
 		}
-		if (frmCadastro->dtCadastro->Lines->Strings[i] != "" && i == 9) {
+		if (frmCadastro->dtCadastro->Lines->Strings[i] != "" && i == 11) {
 			throw Exception ("A aplicação já atingiu o limite máximo de usuários! Infelizmente não há como fazer um novo cadastro (limite máximo: 5)");
-			i=10;
+			i=12;
 		}
 	}
 }
 //---------------------------------------------------------------------------
 void __fastcall TfrmCadastro::FormShow(TObject *Sender)
 {
-	String DadosCadastro = System::Ioutils::TPath::Combine(Sysutils::GetEnvironmentVariable(L"APPDATA"), L"Nintersoft\\Ninterfin\\Inf.nf")
+	String DadosCadastro = System::Ioutils::TPath::Combine(Sysutils::GetEnvironmentVariable(L"APPDATA"), L"Nintersoft\\Ninterfin\\Inf.nf");
 
-	if (FileExists(DadosCadastro)) {
+	if (TFile::Exists(DadosCadastro)) {
 		dtCadastro->Lines->LoadFromFile(DadosCadastro);
 	}
 }

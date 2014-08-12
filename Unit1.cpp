@@ -72,8 +72,9 @@ void __fastcall TfrmInicio::FormShow(TObject *Sender)
 	TDirectory::CreateDirectory(DiretorioDados);
 
 	String LocalArquivo = System::Ioutils::TPath::Combine(DiretorioDados, L"Inf.nf");
-	if (TFile::Exists(LocalArquivo))
+	if (TFile::Exists(LocalArquivo)){
 		mmInfo->Lines->LoadFromFile(LocalArquivo);
+	}
 
 }
 //---------------------------------------------------------------------------

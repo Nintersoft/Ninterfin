@@ -138,9 +138,23 @@
             <DependentOn>Unit3.h</DependentOn>
             <BuildOrder>4</BuildOrder>
         </CppCompile>
+        <CppCompile Include="Unit4.cpp">
+            <Form>frmSobre</Form>
+            <FormType>fmx</FormType>
+            <DependentOn>Unit4.h</DependentOn>
+            <BuildOrder>5</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Unit5.cpp">
+            <Form>frmAddItem</Form>
+            <FormType>fmx</FormType>
+            <DependentOn>Unit5.h</DependentOn>
+            <BuildOrder>6</BuildOrder>
+        </CppCompile>
         <FormResources Include="Unit2.fmx"/>
         <FormResources Include="Unit3.fmx"/>
+        <FormResources Include="Unit4.fmx"/>
         <FormResources Include="Unit1.fmx"/>
+        <FormResources Include="Unit5.fmx"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

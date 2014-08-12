@@ -2,7 +2,7 @@
   Left = 0
   Top = 0
   Caption = 'Ninterfin'
-  ClientHeight = 625
+  ClientHeight = 628
   ClientWidth = 1832
   Position = DesktopCenter
   WindowState = wsMaximized
@@ -16,11 +16,11 @@
   DesignerDeviceName = ''
   DesignerOrientation = 0
   DesignerOSVersion = ''
-  object Rectangle1: TRectangle
+  object spDados: TRectangle
     Anchors = [akLeft, akBottom]
     Fill.Color = claDarkslateblue
     Height = 201.000000000000000000
-    Position.Y = 424.000000000000000000
+    Position.Y = 428.000000000000000000
     Width = 329.000000000000000000
     object lblEtiquetaUsuario: TLabel
       Anchors = []
@@ -115,29 +115,41 @@
       end
       object imFechar: TMenuItem
         Locked = True
-        Text = 'imFechar'
+        Text = 'Fechar'
+        OnClick = imFecharClick
       end
     end
     object imEditar: TMenuItem
       Text = 'Editar'
+      object imAdicionar: TMenuItem
+        Locked = True
+        Text = 'Adicionar'
+        object imAdicionarDados: TMenuItem
+          Locked = True
+          Text = 'Dados'
+          OnClick = imAdicionarDadosClick
+        end
+      end
     end
     object imUsuário: TMenuItem
       Enabled = False
       Text = 'Usu'#225'rio'
+      Visible = False
     end
     object imAjuda: TMenuItem
       Text = 'Ajuda'
       object imSobre: TMenuItem
         Locked = True
         Text = 'Sobre'
+        OnClick = imSobreClick
       end
     end
   end
-  object Rectangle3: TRectangle
+  object spDiv: TRectangle
     Anchors = [akLeft, akRight, akBottom]
     Fill.Color = claBlack
     Height = 10.000000000000000000
-    Position.Y = 416.000000000000000000
+    Position.Y = 419.000000000000000000
     Width = 1841.000000000000000000
   end
   object tmCheck: TTimer
@@ -145,5 +157,95 @@
     OnTimer = tmCheckTimer
     Left = 328
     Top = 112
+  end
+  object spEstat: TRectangle
+    Anchors = [akLeft, akRight, akBottom]
+    Height = 206.000000000000000000
+    Position.X = 328.000000000000000000
+    Position.Y = 427.000000000000000000
+    Width = 1505.000000000000000000
+    object spEstatTit: TRectangle
+      Anchors = [akRight, akBottom]
+      Fill.Color = claAzure
+      Height = 50.000000000000000000
+      Position.X = 1096.000000000000000000
+      Position.Y = 156.000000000000000000
+      Width = 409.000000000000000000
+      object lblEstatTit: TLabel
+        Anchors = []
+        StyledSettings = [Style, FontColor]
+        Height = 41.000000000000000000
+        Position.X = 97.000000000000000000
+        TextSettings.Font.Family = 'Arial Rounded MT Bold'
+        TextSettings.Font.Size = 48.000000000000000000
+        Text = 'Estat'#237'sticas'
+        Width = 232.000000000000000000
+      end
+    end
+  end
+  object ToolBar1: TToolBar
+    Height = 48.000000000000000000
+    Position.Y = 33.000000000000000000
+    TabOrder = 4
+    Width = 1832.000000000000000000
+    object SpeedButton1: TSpeedButton
+      StyledSettings = [FontColor]
+      Height = 33.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 8.000000000000000000
+      StyleLookup = 'cornerbuttonstyle'
+      Text = '+'
+      TextSettings.Font.Family = 'Arial Unicode MS'
+      TextSettings.Font.Size = 26.000000000000000000
+      TextSettings.Font.Style = [fsBold]
+      Width = 41.000000000000000000
+      OnClick = SpeedButton1Click
+    end
+  end
+  object dtControl: TStringGrid
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Height = 339.000000000000000000
+    Position.Y = 80.000000000000000000
+    TabOrder = 8
+    Width = 1833.000000000000000000
+    RowCount = 100
+    RowHeight = 21.000000000000000000
+    TextSettings.Font.Family = 'Arial'
+    TextSettings.Font.Size = 16.000000000000000000
+    object dtSaldo: TStringColumn
+      Header = 'Tipo'
+      Height = 315.000000000000000000
+      ReadOnly = True
+      TabOrder = 0
+      Width = 57.000000000000000000
+    end
+    object dtData: TStringColumn
+      Header = 'Data'
+      Height = 315.000000000000000000
+      Position.X = 57.000000000000000000
+      TabOrder = 1
+      Width = 128.000000000000000000
+    end
+    object dtValor: TStringColumn
+      Header = 'Valor ($)'
+      Height = 315.000000000000000000
+      Position.X = 185.000000000000000000
+      TabOrder = 2
+      Width = 120.000000000000000000
+    end
+    object dtDescrição: TStringColumn
+      Header = 'Descri'#231#227'o'
+      Height = 315.000000000000000000
+      Position.X = 305.000000000000000000
+      TabOrder = 3
+      Width = 464.000000000000000000
+    end
+    object dtComentários: TStringColumn
+      Header = 'Coment'#225'rios'
+      Height = 315.000000000000000000
+      Position.X = 769.000000000000000000
+      TabOrder = 4
+      Width = 1040.000000000000000000
+    end
   end
 end
