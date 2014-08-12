@@ -1,0 +1,58 @@
+object frmSobre: TfrmSobre
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = Single
+  Caption = 'Ninterfin - Sobre'
+  ClientHeight = 175
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object Label1: TLabel
+    StyledSettings = [Style, FontColor]
+    Height = 25.000000000000000000
+    Position.X = 32.000000000000000000
+    Position.Y = 32.000000000000000000
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 26.000000000000000000
+    Text = 'Produto:'
+    Width = 120.000000000000000000
+  end
+  object Label2: TLabel
+    StyledSettings = [Style, FontColor]
+    Height = 25.000000000000000000
+    Position.X = 32.000000000000000000
+    Position.Y = 64.000000000000000000
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 26.000000000000000000
+    Text = 'Vers'#227'o:'
+    Width = 120.000000000000000000
+  end
+  object Label3: TLabel
+    StyledSettings = [Style, FontColor]
+    Height = 25.000000000000000000
+    Position.X = 32.000000000000000000
+    Position.Y = 96.000000000000000000
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 26.000000000000000000
+    Text = 'Licenciado para:'
+    Width = 193.000000000000000000
+  end
+  object lblLegal: TLabel
+    StyledSettings = [Style, FontColor]
+    Height = 25.000000000000000000
+    Position.X = 152.000000000000000000
+    Position.Y = 136.000000000000000000
+    TextSettings.Font.Family = 'Arial Narrow'
+    TextSettings.Font.Size = 18.000000000000000000
+    Text = 'Copyright (C) Nintersoft 2014 - Todos os direitos reservados'
+    Width = 481.000000000000000000
+  end
+end

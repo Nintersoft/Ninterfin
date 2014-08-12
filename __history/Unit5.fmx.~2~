@@ -1,0 +1,136 @@
+object frmAddItem: TfrmAddItem
+  Left = 0
+  Top = 0
+  Caption = 'Ninterfin - Adicionar item'
+  ClientHeight = 368
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object lblTipodeValor: TLabel
+    StyledSettings = [Style, FontColor]
+    Height = 17.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 48.000000000000000000
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 22.000000000000000000
+    Text = 'lblTipodeValor'
+    Width = 120.000000000000000000
+  end
+  object lblDescricao: TLabel
+    StyledSettings = [Style, FontColor]
+    Height = 17.000000000000000000
+    Position.X = 24.000000000000000000
+    Position.Y = 104.000000000000000000
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 22.000000000000000000
+    Text = 'lblDescricao'
+    Width = 120.000000000000000000
+  end
+  object lblValor: TLabel
+    StyledSettings = [Style, FontColor]
+    Height = 17.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 72.000000000000000000
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 22.000000000000000000
+    Text = 'lblValor'
+    Width = 120.000000000000000000
+  end
+  object lblComentario: TLabel
+    StyledSettings = [Style, FontColor]
+    Height = 17.000000000000000000
+    Position.X = 24.000000000000000000
+    Position.Y = 144.000000000000000000
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 22.000000000000000000
+    Text = 'lblComentario'
+    Width = 120.000000000000000000
+  end
+  object lblData: TLabel
+    StyledSettings = [Style, FontColor]
+    Height = 17.000000000000000000
+    Position.X = 24.000000000000000000
+    Position.Y = 176.000000000000000000
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 22.000000000000000000
+    Text = 'lblData'
+    Width = 120.000000000000000000
+  end
+  object slCalendario: TCalendar
+    ControlType = Custom
+    Date = 41859.000000000000000000
+    Height = 180.000000000000000000
+    Position.X = 400.000000000000000000
+    Position.Y = 176.000000000000000000
+    TabOrder = 6
+    Visible = False
+    Width = 202.000000000000000000
+  end
+  object btnAdicionar: TButton
+    StyledSettings = [Style, FontColor]
+    Height = 22.000000000000000000
+    Position.X = 64.000000000000000000
+    Position.Y = 264.000000000000000000
+    TabOrder = 7
+    Text = 'btnAdicionar'
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 24.000000000000000000
+    Width = 80.000000000000000000
+  end
+  object btnLimpar: TButton
+    StyledSettings = [Style, FontColor]
+    Height = 22.000000000000000000
+    Position.X = 184.000000000000000000
+    Position.Y = 264.000000000000000000
+    TabOrder = 8
+    Text = 'btnLimpar'
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 24.000000000000000000
+    Width = 80.000000000000000000
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 9
+    TextSettings.Font.Family = 'Arial'
+    TextSettings.Font.Size = 18.000000000000000000
+    Position.X = 152.000000000000000000
+    Position.Y = 72.000000000000000000
+    Width = 100.000000000000000000
+    Height = 22.000000000000000000
+    StyledSettings = [Style, FontColor]
+  end
+  object SpeedButton1: TSpeedButton
+    Height = 22.000000000000000000
+    Position.X = 456.000000000000000000
+    Position.Y = 120.000000000000000000
+    StyleLookup = 'dropdowneditbutton'
+    Text = 'SpeedButton1'
+    Width = 48.000000000000000000
+  end
+  object cbFixarData: TCheckBox
+    StyledSettings = [Style, FontColor]
+    Height = 19.000000000000000000
+    Position.X = 24.000000000000000000
+    Position.Y = 200.000000000000000000
+    TabOrder = 11
+    Text = 'cbFixarData'
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 22.000000000000000000
+    Width = 120.000000000000000000
+  end
+  object ddTipodeSado: TComboBox
+    DisableFocusEffect = False
+    Height = 22.000000000000000000
+    Position.X = 152.000000000000000000
+    Position.Y = 40.000000000000000000
+    TabOrder = 12
+    Width = 100.000000000000000000
+  end
+end
