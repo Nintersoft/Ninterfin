@@ -91,9 +91,7 @@ object frmAddItem: TfrmAddItem
   object edtDesc: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
     Anchors = [akLeft, akTop, akRight]
-    TabOrder = 8
-    TextSettings.Font.Family = 'Arial'
-    TextSettings.Font.Size = 18.000000000000000000
+    TabOrder = 3
     Position.X = 176.000000000000000000
     Position.Y = 104.000000000000000000
     Width = 433.000000000000000000
@@ -103,37 +101,46 @@ object frmAddItem: TfrmAddItem
   object ddTipodeSado: TComboBox
     DisableFocusEffect = False
     Height = 22.000000000000000000
-    Items.Strings = (
-      'Entrada'
-      'Gasto')
     Position.X = 176.000000000000000000
     Position.Y = 40.000000000000000000
-    TabOrder = 10
+    TabOrder = 1
     Width = 129.000000000000000000
+    object ddItemEntrada: TListBoxItem
+      Height = 19.000000000000000000
+      TabOrder = 0
+      Text = 'Entrada'
+      Width = 19.000000000000000000
+    end
+    object ddItemGasto: TListBoxItem
+      Height = 19.000000000000000000
+      TabOrder = 1
+      Text = 'Gasto'
+      Width = 19.000000000000000000
+    end
   end
-  object Edit1: TEdit
+  object edtCom: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
     Anchors = [akLeft, akTop, akRight]
-    TabOrder = 12
+    TabOrder = 4
     Position.X = 176.000000000000000000
     Position.Y = 136.000000000000000000
     Width = 433.000000000000000000
     Height = 22.000000000000000000
   end
   object DateEdit1: TDateEdit
-    Date = 41862.000000000000000000
+    Date = 41863.000000000000000000
     TodayDefault = True
     Height = 22.000000000000000000
     Position.X = 176.000000000000000000
     Position.Y = 168.000000000000000000
-    TabOrder = 13
+    TabOrder = 5
     TextSettings.HorzAlign = Trailing
     Width = 129.000000000000000000
   end
   object edtValor: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
     Anchors = [akLeft, akTop, akRight]
-    TabOrder = 14
+    TabOrder = 2
     Text = '0000000,00'
     TextSettings.HorzAlign = Trailing
     Position.X = 176.000000000000000000

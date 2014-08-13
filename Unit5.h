@@ -25,9 +25,11 @@ __published:	// IDE-managed Components
 	TButton *btnLimpar;
 	TEdit *edtDesc;
 	TComboBox *ddTipodeSado;
-	TEdit *Edit1;
+	TEdit *edtCom;
 	TDateEdit *DateEdit1;
 	TEdit *edtValor;
+	TListBoxItem *ddItemEntrada;
+	TListBoxItem *ddItemGasto;
 	void __fastcall btnAdicionarClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations

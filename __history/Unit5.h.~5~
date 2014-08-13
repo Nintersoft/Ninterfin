@@ -1,0 +1,39 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit5H
+#define Unit5H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <FMX.Controls.hpp>
+#include <FMX.Forms.hpp>
+#include <FMX.DateTimeCtrls.hpp>
+#include <FMX.Edit.hpp>
+#include <FMX.EmbeddedControls.hpp>
+#include <FMX.ListBox.hpp>
+#include <FMX.StdCtrls.hpp>
+#include <FMX.Types.hpp>
+//---------------------------------------------------------------------------
+class TfrmAddItem : public TForm
+{
+__published:	// IDE-managed Components
+	TLabel *lblTipodeValor;
+	TLabel *lblDescricao;
+	TLabel *lblValor;
+	TLabel *lblComentario;
+	TLabel *lblData;
+	TButton *btnAdicionar;
+	TButton *btnLimpar;
+	TEdit *edtDesc;
+	TComboBox *ddTipodeSado;
+	TEdit *Edit1;
+	TDateEdit *DateEdit1;
+	TEdit *edtValor;
+	void __fastcall btnAdicionarClick(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TfrmAddItem(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TfrmAddItem *frmAddItem;
+//---------------------------------------------------------------------------
+#endif

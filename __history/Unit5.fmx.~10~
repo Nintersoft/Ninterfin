@@ -1,0 +1,152 @@
+object frmAddItem: TfrmAddItem
+  Left = 0
+  Top = 0
+  Caption = 'Ninterfin - Adicionar item'
+  ClientHeight = 272
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object lblTipodeValor: TLabel
+    StyledSettings = [Style, FontColor]
+    Height = 25.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 40.000000000000000000
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 22.000000000000000000
+    Text = 'Tipo de saldo:'
+    Width = 137.000000000000000000
+  end
+  object lblDescricao: TLabel
+    StyledSettings = [Style, FontColor]
+    Height = 25.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 104.000000000000000000
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 22.000000000000000000
+    Text = 'Descricao:'
+    Width = 120.000000000000000000
+  end
+  object lblValor: TLabel
+    StyledSettings = [Style, FontColor]
+    Height = 25.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 72.000000000000000000
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 22.000000000000000000
+    Text = 'Valor:'
+    Width = 120.000000000000000000
+  end
+  object lblComentario: TLabel
+    StyledSettings = [Style, FontColor]
+    Height = 25.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 136.000000000000000000
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 22.000000000000000000
+    Text = 'Comentario:'
+    Width = 120.000000000000000000
+  end
+  object lblData: TLabel
+    StyledSettings = [Style, FontColor]
+    Height = 25.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 168.000000000000000000
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 22.000000000000000000
+    Text = 'Data:'
+    Width = 120.000000000000000000
+  end
+  object btnAdicionar: TButton
+    Anchors = [akTop]
+    StyledSettings = [Style, FontColor]
+    Height = 41.000000000000000000
+    Position.X = 176.000000000000000000
+    Position.Y = 208.000000000000000000
+    TabOrder = 6
+    Text = 'Adicionar'
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 24.000000000000000000
+    Width = 121.000000000000000000
+    OnClick = btnAdicionarClick
+  end
+  object btnLimpar: TButton
+    Anchors = [akTop]
+    StyledSettings = [Style, FontColor]
+    Height = 41.000000000000000000
+    Position.X = 312.000000000000000000
+    Position.Y = 208.000000000000000000
+    TabOrder = 7
+    Text = 'Limpar'
+    TextSettings.Font.Family = 'Arial Rounded MT Bold'
+    TextSettings.Font.Size = 24.000000000000000000
+    Width = 121.000000000000000000
+  end
+  object edtDesc: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 3
+    Position.X = 176.000000000000000000
+    Position.Y = 104.000000000000000000
+    Width = 433.000000000000000000
+    Height = 22.000000000000000000
+    StyledSettings = [Style, FontColor]
+  end
+  object ddTipodeSado: TComboBox
+    DisableFocusEffect = False
+    Height = 22.000000000000000000
+    Position.X = 176.000000000000000000
+    Position.Y = 40.000000000000000000
+    TabOrder = 1
+    Width = 129.000000000000000000
+    object ddItemEntrada: TListBoxItem
+      Height = 19.000000000000000000
+      IsSelected = True
+      TabOrder = 0
+      Text = 'Entrada'
+      Width = 19.000000000000000000
+    end
+    object ddItemGasto: TListBoxItem
+      Height = 19.000000000000000000
+      TabOrder = 1
+      Text = 'Gasto'
+      Width = 19.000000000000000000
+    end
+  end
+  object edtCom: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 4
+    Position.X = 176.000000000000000000
+    Position.Y = 136.000000000000000000
+    Width = 433.000000000000000000
+    Height = 22.000000000000000000
+  end
+  object DateEdit1: TDateEdit
+    Date = 41863.000000000000000000
+    TodayDefault = True
+    Height = 22.000000000000000000
+    Position.X = 176.000000000000000000
+    Position.Y = 168.000000000000000000
+    TabOrder = 5
+    TextSettings.HorzAlign = Trailing
+    Width = 129.000000000000000000
+  end
+  object edtValor: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 2
+    Text = '0000000,00'
+    TextSettings.HorzAlign = Trailing
+    Position.X = 176.000000000000000000
+    Position.Y = 72.000000000000000000
+    Width = 433.000000000000000000
+    Height = 22.000000000000000000
+  end
+end

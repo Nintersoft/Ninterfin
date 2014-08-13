@@ -215,7 +215,6 @@
     object dtSaldo: TStringColumn
       Header = 'Tipo'
       Height = 315.000000000000000000
-      ReadOnly = True
       TabOrder = 0
       Width = 57.000000000000000000
     end

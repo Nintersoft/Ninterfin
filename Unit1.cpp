@@ -105,3 +105,4 @@ void __fastcall TfrmInicio::btnEntrarClick(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+
