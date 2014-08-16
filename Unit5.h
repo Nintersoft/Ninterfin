@@ -31,6 +31,7 @@ __published:	// IDE-managed Components
 	TListBoxItem *ddItemEntrada;
 	TListBoxItem *ddItemGasto;
 	void __fastcall btnAdicionarClick(TObject *Sender);
+	void __fastcall btnLimparClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TfrmAddItem(TComponent* Owner);

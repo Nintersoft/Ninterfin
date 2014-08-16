@@ -87,6 +87,7 @@ object frmAddItem: TfrmAddItem
     TextSettings.Font.Family = 'Arial Rounded MT Bold'
     TextSettings.Font.Size = 24.000000000000000000
     Width = 121.000000000000000000
+    OnClick = btnLimparClick
   end
   object edtDesc: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
@@ -107,6 +108,7 @@ object frmAddItem: TfrmAddItem
     Width = 129.000000000000000000
     object ddItemEntrada: TListBoxItem
       Height = 19.000000000000000000
+      IsSelected = True
       TabOrder = 0
       Text = 'Entrada'
       Width = 19.000000000000000000
@@ -128,7 +130,7 @@ object frmAddItem: TfrmAddItem
     Height = 22.000000000000000000
   end
   object DateEdit1: TDateEdit
-    Date = 41863.000000000000000000
+    Date = 41867.000000000000000000
     TodayDefault = True
     Height = 22.000000000000000000
     Position.X = 176.000000000000000000

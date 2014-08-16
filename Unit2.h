@@ -53,6 +53,9 @@ __published:	// IDE-managed Components
 	TStringColumn *dtValor;
 	TStringColumn *dtDescrição;
 	TStringColumn *dtComentários;
+	TSpeedButton *SpeedButton2;
+	TSpeedButton *sbFiltro;
+	TMenuItem *imLoc;
 	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
 	void __fastcall tmCheckTimer(TObject *Sender);
 	void __fastcall imFecharClick(TObject *Sender);

@@ -130,6 +130,11 @@
           OnClick = imAdicionarDadosClick
         end
       end
+      object imLoc: TMenuItem
+        Enabled = False
+        Locked = True
+        Text = 'Localizar'
+      end
     end
     object imUsuário: TMenuItem
       Enabled = False
@@ -200,6 +205,27 @@
       TextSettings.Font.Style = [fsBold]
       Width = 41.000000000000000000
       OnClick = SpeedButton1Click
+    end
+    object SpeedButton2: TSpeedButton
+      Enabled = False
+      Height = 33.000000000000000000
+      Position.X = 1784.000000000000000000
+      Position.Y = 8.000000000000000000
+      StyleLookup = 'searcheditbutton'
+      Text = 'Localizar'
+      Width = 41.000000000000000000
+    end
+    object sbFiltro: TSpeedButton
+      Enabled = False
+      StyledSettings = [Family, FontColor]
+      Height = 33.000000000000000000
+      Position.X = 64.000000000000000000
+      Position.Y = 8.000000000000000000
+      StyleLookup = 'cornerbuttonstyle'
+      Text = '\/'
+      TextSettings.Font.Size = 16.000000000000000000
+      TextSettings.Font.Style = [fsBold]
+      Width = 41.000000000000000000
     end
   end
   object dtControl: TStringGrid

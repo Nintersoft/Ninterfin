@@ -26,6 +26,8 @@ int i, j, c, l;
 //--------------------------------------------
 	frmPrincipal->dtControl->BeginUpdate();
 
+	frmPrincipal->dtSaldo->ReadOnly = false;  // Garante que o valor poderá ser modificado.
+
 	for (j = 0; j < frmPrincipal->dtControl->ColumnCount; j++) {
 		for (i = 0; i < frmPrincipal->dtControl->RowCount; i++) {
 			if (frmPrincipal->dtControl->Cells[j][i] == "" && j == 0){
@@ -48,7 +50,9 @@ int i, j, c, l;
 			}
 		}
 	}
+
 	frmPrincipal->dtControl->EndUpdate();
+
 	frmPrincipal->dtControl->SelectCell(c,l);
 	frmAddItem->Hide();
 	limpar();
@@ -61,7 +65,13 @@ int i, j, c, l;
 void limpar(){
 	frmAddItem->edtDesc->Text = "";
 	frmAddItem->edtCom->Text = "";
-	frmAddItem->edtValor->Text = "";
+	frmAddItem->edtValor->Text = "000000,00";
 	frmAddItem->DateEdit1->Text = Date();
 }
 //---------------------------------------------------------------------------
+void __fastcall TfrmAddItem::btnLimparClick(TObject *Sender)
+{
+	limpar();
+}
+//---------------------------------------------------------------------------
+

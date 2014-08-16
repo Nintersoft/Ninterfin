@@ -1,0 +1,72 @@
+//---------------------------------------------------------------------------
+
+#include <fmx.h>
+#pragma hdrstop
+
+#include "Unit5.h"
+#include "Unit2.h"
+//---------------------------------------------------------------------------
+void limpar();
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.fmx"
+TfrmAddItem *frmAddItem;
+//---------------------------------------------------------------------------
+__fastcall TfrmAddItem::TfrmAddItem(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TfrmAddItem::btnAdicionarClick(TObject *Sender)
+{
+//--------- contadores - counters ------------
+
+int i, j, c, l;
+
+//--------------------------------------------
+	frmPrincipal->dtControl->BeginUpdate();
+
+	frmPrincipal->dtSaldo->ReadOnly = false;
+
+	for (j = 0; j < frmPrincipal->dtControl->ColumnCount; j++) {
+		for (i = 0; i < frmPrincipal->dtControl->RowCount; i++) {
+			if (frmPrincipal->dtControl->Cells[j][i] == "" && j == 0){
+				if (ddItemGasto->IsSelected == true){
+					frmPrincipal->dtControl->Cells[0][i] = "-";
+				}
+				else if (ddItemEntrada->IsSelected == true) {
+					frmPrincipal->dtControl->Cells[0][i] = "+";
+				}
+				frmPrincipal->dtControl->Cells[1][i] = edtValor->Text;
+				frmPrincipal->dtControl->Cells[2][i] = DateEdit1->Text;
+				frmPrincipal->dtControl->Cells[3][i] = edtDesc->Text;
+				frmPrincipal->dtControl->Cells[4][i] = edtCom->Text;
+				c = j;
+				l = i;
+				i = frmPrincipal->dtControl->RowCount;
+			}
+			else {
+
+			}
+		}
+	}
+
+	frmPrincipal->dtSaldo->ReadOnly = false;
+	frmPrincipal->dtControl->EndUpdate();
+
+	frmPrincipal->dtControl->SelectCell(c,l);
+	frmAddItem->Hide();
+	limpar();
+	j = 0;
+	i = 0;
+	c = 0;
+	l = 0;
+}
+//---------------------------------------------------------------------------
+void limpar(){
+	frmAddItem->edtDesc->Text = "";
+	frmAddItem->edtCom->Text = "";
+	frmAddItem->edtValor->Text = "";
+	frmAddItem->DateEdit1->Text = Date();
+}
+//---------------------------------------------------------------------------
