@@ -12,7 +12,7 @@ Equipe de desenvolvimento Nintersoft
 
 # [ LEGACY/ARCHIVED ] Ninterfin
 
-It was intended to develop a financial control tool. However, given that the development focus has been changed and that inumerous viable alternatives have
+It was intended to develop a financial control tool. However, given that the development focus has been changed and that innumerous viable alternatives have
 appeared, this project has become obsolete.
 
 For development purposes, it has been opted to archive this project rather than delete it.
